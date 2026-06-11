@@ -1,0 +1,97 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Yu Gothic", sans-serif;
+    overflow: hidden;
+}
+
+#background {
+    position: fixed;
+    inset: 0;
+
+    background-image: url("bg/gate.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    z-index: -2;
+}
+
+#background::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.15)
+    );
+
+    z-index: -1;
+}
+
+#status-bar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 10px;
+
+    background: rgba(0,0,0,0.6);
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+#message-box {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0,0,0,0.85);
+
+    color: white;
+
+    padding: 15px;
+}
+
+#speaker-name {
+    color: gold;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#message-text {
+    min-height: 70px;
+    line-height: 1.6;
+}
+
+#choices button,
+#next-button {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 8px;
+}
+#next-button{
+    position: relative !important;
+    z-index: 9999 !important;
+}
